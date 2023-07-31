@@ -45,13 +45,7 @@
         "swoole/ide-helper": "^4.5",
         "hyperf/testing": "~3.0.0"
     },
-    "suggest": {
-        "swow/swow": "Required to create swow components."
-    },
-    "minimum-stability": "dev-main",
-    "prefer-stable": true,
     "config": {
-        "optimize-autoloader": true,
         "sort-packages": true
     },
     "scripts": {
