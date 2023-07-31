@@ -48,7 +48,7 @@
     "suggest": {
         "swow/swow": "Required to create swow components."
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "dev-main",
     "prefer-stable": true,
     "config": {
         "optimize-autoloader": true,
