@@ -41,7 +41,7 @@
 ## 安装
 
 ```shell script
-composer require hyperf-ext/enum
+composer require woodynew/hyperf-ext-enum
 ```
 
 ## 基本用法
@@ -606,7 +606,7 @@ php bin/hyperf.php vendor:publish hyperf/translation
 运行以下命令将语言文件发布到你的 `storage/languages` 目录中。
 
 ```shell script
-php bin/hyperf.php vendor:publish hyperf-ext/enum
+php bin/hyperf.php vendor:publish woodynew/hyperf-ext-enum
 ```
 
 ### 枚举描述
