@@ -10,7 +10,7 @@ declare(strict_types=1);
  */
 namespace HyperfExt\Enum;
 
-use HyperfExt\Enum\Commands\EnumAnnotateCommand;
+use Hyperf\Constants\ConstantsCollector;
 use HyperfExt\Enum\Commands\MakeEnumCommand;
 use HyperfExt\Enum\Listeners\BootApplicationListener;
 use HyperfExt\Enum\Listeners\ValidatorFactoryResolvedListener;
@@ -27,8 +27,14 @@ class ConfigProvider
         }
 
         return [
+            'annotations' => [
+                'scan' => [
+                    'collectors' => [
+                        ConstantsCollector::class,
+                    ],
+                ],
+            ],
             'commands' => [
-                EnumAnnotateCommand::class,
                 MakeEnumCommand::class,
             ],
             'listeners' => [
