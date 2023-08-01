@@ -29,7 +29,6 @@
         "ext-json": "*",
         "ext-swoole": ">=4.5",
         "doctrine/dbal": "^3.0",
-        "hanneskod/classtools": "1.2.0",
         "hyperf/framework": "3.0.*",
         "hyperf/di": "3.0.*",
         "hyperf/database": "~3.0.0",
