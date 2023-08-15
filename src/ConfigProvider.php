@@ -8,6 +8,7 @@ declare(strict_types=1);
  * @contact  eric@zhu.email
  * @license  https://github.com/hyperf-ext/enum/blob/master/LICENSE
  */
+
 namespace HyperfExt\Enum;
 
 use Hyperf\Constants\ConstantsCollector;
@@ -26,6 +27,11 @@ class ConfigProvider
             $languagesPath = $translationConfig['path'] ?? $languagesPath;
         }
 
+        $commands = [];
+        if (class_exists('Hyperf\Devtool\Generator\GeneratorCommand')) {
+            $commands[] = MakeEnumCommand::class;
+        }
+
         return [
             'annotations' => [
                 'scan' => [
@@ -34,9 +40,7 @@ class ConfigProvider
                     ],
                 ],
             ],
-            'commands' => [
-                MakeEnumCommand::class,
-            ],
+            'commands' => $commands,
             'listeners' => [
                 BootApplicationListener::class,
                 ValidatorFactoryResolvedListener::class,
